@@ -19,4 +19,8 @@ public class StudentService {
     public List<StudentEntity> getAllStudents() {
         return this.studentRepository.findAll();
     }
+
+    public StudentEntity save(StudentEntity studentEntity) {
+        return this.studentRepository.save(studentEntity);
+    }
 }

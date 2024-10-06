@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class StudentEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, length = 10)
     private int studentId;
 
