@@ -23,4 +23,8 @@ public class StudentService {
     public StudentEntity save(StudentEntity studentEntity) {
         return this.studentRepository.save(studentEntity);
     }
+
+    public void delete(int studentId) {
+        this.studentRepository.deleteById(studentId);
+    }
 }
