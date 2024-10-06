@@ -26,4 +26,9 @@ public class StudentController {
     public ResponseEntity<StudentEntity> addStudent(@RequestBody StudentEntity studentEntity) {
         return ResponseEntity.ok(this.studentService.save(studentEntity));
     }
+
+    @PutMapping
+    public ResponseEntity<StudentEntity> updateStudent(@RequestBody StudentEntity studentEntity) {
+        return ResponseEntity.ok(this.studentService.save(studentEntity));
+    }
 }
