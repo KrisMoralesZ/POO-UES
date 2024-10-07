@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentService {
@@ -18,6 +19,10 @@ public class StudentService {
 
     public List<StudentEntity> getAllStudents() {
         return this.studentRepository.findAll();
+    }
+
+    public Optional<StudentEntity> getStudentById(int id) {
+        return studentRepository.findById(id);
     }
 
     public StudentEntity save(StudentEntity studentEntity) {
